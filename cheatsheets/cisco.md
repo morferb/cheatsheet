@@ -7,3 +7,4 @@ show version
 show ip interface brief
 show running-config
 show vlan brief
+```
