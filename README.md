@@ -4,8 +4,8 @@ Este repositorio contiene hojas de ayuda rápida (*cheatsheets*) con comandos ú
 
 ## Índice
 
-- [Cisco](./cheatsheet/cisco.md)
-- [Fortigate](./fortigate.md)
+- [Cisco](cheatsheets/Cisco.md)
+- [Fortigate](cheatsheets/Fortigate.md)
 - [WLC (Wireless LAN Controller)](./wlc.md)
 - [Access Point (AP)](./ap.md)
 
