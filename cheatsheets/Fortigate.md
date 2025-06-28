@@ -13,7 +13,7 @@ diagnose debug console timestamp enable
 diagnose debug flow trace start 999
 diagnose debug enable
 ```
->Stopr debug
+>Stop debug
 ```bash
 diagnose debug disable 
 ```
