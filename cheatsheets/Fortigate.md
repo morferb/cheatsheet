@@ -1,13 +1,3 @@
-# Aplicar Wildcard #
-```bash
-config firewall address
-edit "10.111.X.122/32"
-set type wildcard
-set associated-interface "RESTAURANTES"
-set wildcard 10.111.0.122 255.255.0.255
-end
-GET
-```
 # FLOW #
 ```bash
 diagnose debug disable 
@@ -27,4 +17,15 @@ diagnose debug enable
 # FINALIZAR EL DEBUG #
 ```bash
 diagnose debug disable 
+```
+---
+# Aplicar Wildcard #
+```bash
+config firewall address
+edit "10.0.X.122/32"
+set type wildcard
+set associated-interface "RESTAURANTES"
+set wildcard 10.0.0.122 255.255.0.255
+end
+GET
 ```
