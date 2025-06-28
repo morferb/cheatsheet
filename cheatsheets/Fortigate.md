@@ -1,4 +1,4 @@
-# FLOW #
+## FLOW #
 ```bash
 diagnose debug disable 
 diagnose debug flow trace stop 
@@ -14,12 +14,12 @@ diagnose debug enable
 ```
 
 
-# FINALIZAR EL DEBUG #
+## FINALIZAR EL DEBUG #
 ```bash
 diagnose debug disable 
 ```
 ---
-# Aplicar Wildcard #
+## Aplicar Wildcard #
 ```bash
 config firewall address
 edit "10.0.X.122/32"
@@ -29,3 +29,22 @@ set wildcard 10.0.0.122 255.255.0.255
 end
 GET
 ```
+---
+##  Admin Profile
+```
+config system accprofile
+    edit "Read_Only"
+        set secfabgrp read
+        set ftviewgrp read
+        set authgrp read
+        set sysgrp read
+        set netgrp read
+        set loggrp read
+        set fwgrp read
+        set vpngrp read
+        set utmgrp read
+        set wifi read
+    next
+end
+```
+> show system accprofile "Read_Only"
