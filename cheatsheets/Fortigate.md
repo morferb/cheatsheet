@@ -1,3 +1,4 @@
+# Validación
 ## FLOW #
 ```bash
 diagnose debug disable 
@@ -12,26 +13,59 @@ diagnose debug console timestamp enable
 diagnose debug flow trace start 999
 diagnose debug enable
 ```
-
-
-## FINALIZAR EL DEBUG #
+>Stopr debug
 ```bash
 diagnose debug disable 
 ```
+---
+## IDENTIFICAR ZONA
+```Verilog
+get router info routing-table details X.X.X.X
+```
+
+```Verilog
+sh sys zone | grep -f portx.x
+```
+
+```Verilog
+sh sys int portx.x
+```
+---
 ---
 ## Aplicar Wildcard #
 ```bash
 config firewall address
 edit "10.0.X.122/32"
 set type wildcard
-set associated-interface "RESTAURANTES"
+set associated-interface "XXXX"
 set wildcard 10.0.0.122 255.255.0.255
 end
 GET
 ```
+# IPsec
+---
+```bash
+config vdom
+edit xxxx
+
+```
+```bash
+get vpn ipsec tunnel
+```
+
+```bash
+get vpn ipsec tunnel summary
+
+```
+
+```bash
+get vpn ipsec tunnel summary | grep -v "0/0"
+
+```
+---
 ---
 ##  Admin Profile
-```
+```bash
 config system accprofile
     edit "Read_Only"
         set secfabgrp read
@@ -48,3 +82,4 @@ config system accprofile
 end
 ```
 > show system accprofile "Read_Only"
+---
