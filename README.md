@@ -6,7 +6,7 @@ Este repositorio contiene hojas de ayuda rápida (*cheatsheets*) con comandos ú
 
 - [Cisco](cheatsheets/Cisco.md)
 - [Fortigate](cheatsheets/Fortigate.md)
-- [WLC (Wireless LAN Controller)](./WLC.md)
+- [WLC (Wireless LAN Controller)](cheatsheets/WLC.md)
 - [Access Point (AP)](cheatsheets/AP.md)
 - [Regex](cheatsheets/Regex.md)
 
