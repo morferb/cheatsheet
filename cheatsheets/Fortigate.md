@@ -1,4 +1,24 @@
 # Validación
+ICMP
+```
+execute ping 8.8.8.8  
+```
+Ver tabla arp
+```
+get system arp  
+```
+```
+diagnose ip arp list  
+```
+Ver todas las rutas
+```
+get router info routing-table all  
+```
+## Debug
+```
+diagnose sniffer packet any '' 4 0 l
+```
+
 ## FLOW #
 ```bash
 diagnose debug disable 
@@ -89,3 +109,72 @@ end
 ```
 > show system accprofile "Read_Only"
 ---
+---
+Muestra la configuración global
+```
+sh system interface  
+```
+ver información de la tarjeta
+```
+get hardware nic [portX]  
+```
+ver información de la tarjeta
+```
+diagnose hardware deviceinfo nic [puertoX] grep -f Current_HW 
+```
+ver versión de forti
+```
+get system status  
+```
+Ver policy ID
+```
+sh firewall policy xxx 
+```
+ver politica de rutas
+```
+sh router policy  
+```
+ver lista de sesiones
+```
+diagnose system session list  
+```
+limpia todas las xlate/translations
+```
+diagnose system session clear  
+```
+
+Ver el top de procesos
+```
+diagnose system top  
+```
+Matar proceso
+```
+diagnose system kill xxx
+```
+comprobar si se puede acceder con un usuario de ldap
+```
+diag test auth ldap  
+```
+ver stado del ha
+```
+get system ha status  
+```
+sincronizar ha
+```
+execute ha synchronize config  
+```
+```
+execute ha synchronize stop execute ha synchronize start  
+```
+Mostrar las estadísticas del tráfico hasta el momento:
+```
+get system performance firewall statistics  
+```
+Mostrar el estado del CPU y tiempo prendido:
+```
+get system performance status  
+```
+Mostrar el uso del CPU ordenado por los procesos de mayor peso
+```
+get system performance top  
+```
