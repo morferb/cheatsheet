@@ -31,6 +31,12 @@ sh sys zone | grep -f portx.x
 sh sys int portx.x
 ```
 ---
+## Traffic Shaper
+```
+show firewall shaper traffic-shaper "XXXX"
+```
+---
+# Configuración
 ---
 ## Aplicar Wildcard #
 ```bash
@@ -42,7 +48,7 @@ set wildcard 10.0.0.122 255.255.0.255
 end
 GET
 ```
-# IPsec
+## IPsec
 ---
 ```bash
 config vdom
