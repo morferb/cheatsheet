@@ -9,5 +9,6 @@ Este repositorio contiene hojas de ayuda rápida (*cheatsheets*) con comandos ú
 - [WLC (Wireless LAN Controller)](cheatsheets/WLC.md)
 - [Access Point (AP)](cheatsheets/AP.md)
 - [Regex](cheatsheets/Regex.md)
+- [Linux/Snmp](cheatsheets/Linux.md)
 
 > Sugerencia: estos archivos pueden evolucionar con el tiempo, agregando configuraciones más avanzadas o casos reales.
