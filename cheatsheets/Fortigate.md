@@ -1,4 +1,5 @@
 # Validación
+##  Interfaces de red
 ICMP
 ```
 execute ping 8.8.8.8  
@@ -8,17 +9,18 @@ Ver tabla arp
 get system arp  
 ```
 ```
-diagnose ip arp list  
+diagnose ip arp list 
 ```
+## Routing
 Ver todas las rutas
 ```
 get router info routing-table all  
 ```
+# Troubleshooting
 ## Debug
 ```
 diagnose sniffer packet any '' 4 0 l
 ```
-
 ## FLOW #
 ```bash
 diagnose debug disable 
@@ -50,6 +52,7 @@ sh sys zone | grep -f portx.x
 ```Verilog
 sh sys int portx.x
 ```
+---
 ---
 ## Traffic Shaper
 ```
@@ -142,11 +145,6 @@ limpia todas las xlate/translations
 ```
 diagnose system session clear  
 ```
-
-Ver el top de procesos
-```
-diagnose system top  
-```
 Matar proceso
 ```
 diagnose system kill xxx
@@ -165,6 +163,11 @@ execute ha synchronize config
 ```
 ```
 execute ha synchronize stop execute ha synchronize start  
+```
+## Monitoreo y performance
+Ver el top de procesos
+```
+diagnose system top  
 ```
 Mostrar las estadísticas del tráfico hasta el momento:
 ```
