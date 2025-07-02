@@ -4,6 +4,12 @@ ICMP
 ```
 execute ping 8.8.8.8  
 ```
+```
+execute ping-options view-settings
+```
+```
+execute ping-options sd-wan yes
+```
 Ver tabla arp
 ```
 get system arp  
