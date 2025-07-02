@@ -5,6 +5,9 @@ ICMP
 execute ping 8.8.8.8  
 ```
 ```
+execute ping-options source x.x.x.x
+```
+```
 execute ping-options view-settings
 ```
 ```
