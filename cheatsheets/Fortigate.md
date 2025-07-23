@@ -174,6 +174,19 @@ execute ha synchronize config
 execute ha synchronize stop execute ha synchronize start  
 ```
 ## Monitoreo y performance
+### Link Monitor
+```
+diagnose sys link-monitor status
+```
+
+```
+show sys link-monitor
+```
+
+```
+show full-configuration system link-monitor monitor_l2l_oficina
+```
+
 Ver el top de procesos
 ```
 diagnose system top  
@@ -190,3 +203,83 @@ Mostrar el uso del CPU ordenado por los procesos de mayor peso
 ```
 get system performance top  
 ```
+## SDWAN
+# SNMP
+```Verilog
+config system snmp sysinfo
+    set status enable
+end
+config system snmp user
+    edit "morferb"
+        set source-ip \#IP
+        set security-level auth-priv
+        set auth-pwd \#PASSWORD
+        set priv-pwd \#PASSWORD
+    next
+end
+```
+# Configurar TACACS SERVER
+```Bash
+config user tacacs+
+edit "morferb_TACACS"
+set source-ip #IP_MGMT
+set server "X.X.X.X"
+set secondary-server "Y.Y.Y.Y"
+set key #PASSWORD 
+set secondary-key #PASSWORD
+set authen-type pap
+set authorization enable
+next
+end
+```
+# Admin Profile
+```JavaScript
+config system accprofile
+    edit "Read_Only"
+        set secfabgrp read
+        set ftviewgrp read
+        set authgrp read
+        set sysgrp read
+        set netgrp read
+        set loggrp read
+        set fwgrp read
+        set vpngrp read
+        set utmgrp read
+        set wifi read
+    next
+end
+```
+# Configurar Grupo
+```JavaScript
+config user group
+    edit "FG_RW"
+        set member "ISE"
+    next
+end
+```
+# PERMISOS/Trusted Host de Usuarios
+
+```JavaScript
+config system admin
+    edit "usr"
+        set remote-auth enable
+        set trusthost1 X.X.X.X Y.Y.Y.Y
+        set trusthost2 X.X.X.X Y.Y.Y.Y
+        set trusthost3 X.X.X.X Y.Y.Y.Y
+        set accprofile "Read_Only"
+        set vdom "root"
+        set wildcard enable
+        set remote-group "FG_RW"
+    next
+end
+```
+# FORTIGUAR (interface-select-method)
+```
+config system fortiguard
+set interface-select-method sdwan
+end
+```
+>Sirve para que el FortiGate use las interfaces del SD-WAN al consultar los servicios de FortiGuard.
+
+
+
